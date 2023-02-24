@@ -70,11 +70,12 @@ export default function Create() {
 			name,
 			details,
 			category: category.value,
-			dueDate: timestamp.fromDate(new Date(dueDate)),
+			// dueDate: timestamp(dueDate),
 			comments: [],
-			createdBy: createdBy,
-			assignedUsersList: assignedUsersList
+			createdBy,
+			assignedUsersList
 		};
+
 		await addDocument(project);
 		if (!response.error) {
 			navigate('/');
