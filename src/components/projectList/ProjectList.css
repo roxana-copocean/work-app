@@ -1,7 +1,7 @@
 .project-list {
 	margin-top: 40px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
 	grid-gap: 20px;
 }
 .project-list a {
