@@ -21,7 +21,6 @@ export const useLogout = () => {
 			const userRef = doc(projectFirestore, 'users', projectAuth.currentUser.uid);
 
 			await updateDoc(userRef, { online: false });
-			console.log('Successfully updated online status');
 
 			await projectAuth.signOut();
 			// dispatch logout function
@@ -32,7 +31,6 @@ export const useLogout = () => {
 				setIsPending(false);
 				setError(null);
 			}
-			console.log('logged3');
 		} catch (error) {
 			if (!isCancelled) {
 				setError(error.message);

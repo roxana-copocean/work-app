@@ -2,7 +2,7 @@ import './Navbar.css';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/capybara.svg';
+import logo from '../../assets/logo.svg';
 import { useLogout } from '../../hooks/useLogout';
 import { useAuthContext } from '../../hooks/useAuthContext';
 
@@ -15,7 +15,7 @@ export default function Navbar() {
 				<li className="logo">
 					<Link to="/" className="logo_layout">
 						<img src={logo} alt="logo" />
-						<span>capybara</span>
+						<span>geekMonk</span>
 					</Link>
 				</li>
 				{!user && (

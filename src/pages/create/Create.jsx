@@ -72,7 +72,7 @@ export default function Create() {
 			name,
 			details,
 			category: category.value,
-			dueDate: serverTimestamp(dueDate),
+			dueDate: dueDate,
 			comments: [],
 			createdBy,
 			assignedUsersList
