@@ -6,6 +6,7 @@ import { timestamp } from '../../firebase/config';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { useNavigate } from 'react-router-dom';
+import { serverTimestamp } from 'firebase/firestore';
 
 const categories = [
 	{ value: 'development', label: 'Development' },
@@ -15,9 +16,9 @@ const categories = [
 ];
 
 export default function Create() {
-	const { documents } = useCollection('users');
 	const { user } = useAuthContext();
 	const { addDocument, response } = useFirestore('projects');
+	const { documents } = useCollection('users');
 
 	const [ users, setUsers ] = useState([]);
 	const [ name, setName ] = useState('');
@@ -71,7 +72,7 @@ export default function Create() {
 			name,
 			details,
 			category: category.value,
-			// dueDate: timestamp(dueDate),
+			dueDate: serverTimestamp(dueDate),
 			comments: [],
 			createdBy,
 			assignedUsersList

@@ -23,7 +23,7 @@ const projectAuth = getAuth(app);
 const projectStorage = getStorage(app);
 
 // Firebase timestamp
-// const timestamp = serverTimestamp();
-const timestamp = Timestamp.now();
+const timestamp = serverTimestamp();
+// const timestamp = Timestamp.now();
 
 export { projectFirestore, projectAuth, timestamp, projectStorage };

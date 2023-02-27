@@ -56,9 +56,8 @@ export const useFirestore = (collectionName) => {
 	const addDocument = async (doc) => {
 		dispatch({ type: 'IS_PENDING' });
 		try {
-			await setDoc(colRef.parent, {}, { merge: true });
-			// const createdAt = timestamp();
-			const addedDocument = await addDoc(colRef, { ...doc, createdAt: timestamp() });
+			const createdAt = timestamp;
+			const addedDocument = await addDoc(colRef, { ...doc, createdAt });
 			dispatchIfNotCancelled({ type: 'ADDED_DOCUMENT', payload: addedDocument });
 		} catch (error) {
 			dispatchIfNotCancelled({ type: 'ERROR', payload: error.message });
