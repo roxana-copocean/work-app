@@ -6,13 +6,11 @@ export default function Login() {
 	const [ password, setPassword ] = useState('');
 
 	const { login, isPending, error } = useLogin();
-
 	// handle submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
 		login(email, password);
-		setEmail('');
-		setPassword('');
 	};
 	return (
 		<form className="auth-form" onSubmit={handleSubmit}>
@@ -27,12 +25,8 @@ export default function Login() {
 				<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 			</label>
 
-			{!isPending && <button className="btn">Log in</button>}
-			{isPending && (
-				<button className="btn" disabled>
-					loading
-				</button>
-			)}
+			<button className="btn">Log in</button>
+
 			{error && <div className="error">{error}</div>}
 		</form>
 	);
