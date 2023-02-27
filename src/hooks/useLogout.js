@@ -17,7 +17,6 @@ export const useLogout = () => {
 
 		// sign the user out
 		try {
-			console.log('logged1');
 			// update online status
 			const userRef = doc(projectFirestore, 'users', projectAuth.currentUser.uid);
 
@@ -27,7 +26,6 @@ export const useLogout = () => {
 			await projectAuth.signOut();
 			// dispatch logout function
 			dispatch({ type: 'LOGOUT' });
-			console.log('logged2');
 
 			// update state
 			if (!isCancelled) {
@@ -37,7 +35,6 @@ export const useLogout = () => {
 			console.log('logged3');
 		} catch (error) {
 			if (!isCancelled) {
-				console.log('error to the console');
 				setError(error.message);
 				setIsPending(false);
 				console.log(error.message);

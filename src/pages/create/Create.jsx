@@ -32,10 +32,11 @@ export default function Create() {
 	useEffect(
 		() => {
 			if (documents) {
-				const options = documents.map((user) => {
-					return { value: user, label: user.displayName };
-				});
-				setUsers(options);
+				setUsers(
+					documents.map((user) => {
+						return { value: { ...user, id: user.id }, label: user.displayName };
+					})
+				);
 			}
 		},
 		[ documents ]
@@ -62,7 +63,7 @@ export default function Create() {
 			return {
 				displayName: user.value.displayName,
 				photoURL: user.value.photoURL,
-				id: user.value.uid
+				id: user.value.id
 			};
 		});
 

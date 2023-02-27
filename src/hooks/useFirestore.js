@@ -1,7 +1,7 @@
 // Use Firestore Hook
 
 import { useReducer, useEffect, useState } from 'react';
-import { collection, addDoc, doc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, deleteDoc, setDoc } from 'firebase/firestore';
 import { projectFirestore, timestamp } from '../firebase/config';
 
 // the response state object
@@ -56,6 +56,7 @@ export const useFirestore = (collectionName) => {
 	const addDocument = async (doc) => {
 		dispatch({ type: 'IS_PENDING' });
 		try {
+			await setDoc(colRef.parent, {}, { merge: true });
 			// const createdAt = timestamp();
 			const addedDocument = await addDoc(colRef, { ...doc, createdAt: timestamp() });
 			dispatchIfNotCancelled({ type: 'ADDED_DOCUMENT', payload: addedDocument });
