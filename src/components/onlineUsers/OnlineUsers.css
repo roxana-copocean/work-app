@@ -2,17 +2,17 @@
 	width: 11em;
 	min-width: 11em;
 	padding: 30px;
-	background: var(--secondary-color);
-	color: var(--highlight-color);
-	font-size: 1rem;
+	background: var(--input-color);
+	color: var(--gray);
+	font-size: .9rem;
 }
 
 .user-list h2 {
 	text-align: right;
+	font-size: .8rem;
 	font-weight: 500;
 	color: var(--white);
 	margin-bottom: 40px;
-	font-size: 1rem;
 }
 
 .user-list .user-list-item {
@@ -38,5 +38,6 @@
 }
 
 .online {
-	color: var(--accent-color);
+	color: var(--white);
+	font-size: .8rem;
 }

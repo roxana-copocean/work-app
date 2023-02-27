@@ -4,15 +4,15 @@
 
 :root {
 	--heading-color: #003760;
-	--primary-color: #2c384a;
-	--secondary-color: #314056;
-	--highlight-color: #1a759f;
+	--primary-color: #051e34;
+	--secondary-color: #0f263d;
+	--highlight-color: #1e364d;
 	--error: #f57c00;
-	--accent-color: #039be5;
-	--gray: #eceff1;
+	--accent-color: #669df6;
+	--gray: #cdd2d6;
 	--bg-color: #eceff1;
 	--white: #fff;
-	--input-color: #777;
+	--input-color: #717171;
 	--light-gray: #ddd;
 }
 /* ******************************************************************** */

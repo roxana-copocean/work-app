@@ -7,7 +7,7 @@ export default function OnlineUsers() {
 	const { documents, error } = useCollection('users');
 	return (
 		<div className="user-list">
-			<h2>Users</h2>
+			{/* <h2>users</h2> */}
 			{error && <div className="error">{error}</div>}
 			{documents &&
 				documents.map((doc) => (
