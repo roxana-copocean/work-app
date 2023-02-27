@@ -5,7 +5,7 @@ import { doc, onSnapshot } from 'firebase/firestore';
 import { projectFirestore } from '../firebase/config';
 
 export const useDocument = (collectionName, id) => {
-	const [ document, setDocument ] = useState(null);
+	const [ projectDocument, setProjectDocument ] = useState(null);
 	const [ error, setError ] = useState(null);
 
 	useEffect(
@@ -14,11 +14,15 @@ export const useDocument = (collectionName, id) => {
 			const unsubscribe = onSnapshot(
 				docRef,
 				(snapshot) => {
-					setDocument({
-						...snapshot.data(),
-						id: snapshot.id
-					});
-					setError(null);
+					if (snapshot.data()) {
+						setProjectDocument({
+							...snapshot.data(),
+							id: snapshot.id
+						});
+						setError(null);
+					} else {
+						setError('No document!');
+					}
 				},
 				(error) => {
 					console.log(error);
@@ -31,7 +35,7 @@ export const useDocument = (collectionName, id) => {
 	);
 
 	return {
-		document,
+		projectDocument,
 		error
 	};
 };

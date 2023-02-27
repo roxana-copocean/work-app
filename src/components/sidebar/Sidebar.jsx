@@ -13,7 +13,7 @@ export default function Sidebar() {
 			<div className="sidebar-content">
 				<div className="user">
 					<Avatar src={user.photoURL} />
-					<p>Hi {user.displayName}!</p>
+					<p>{user.displayName}</p>
 				</div>
 
 				<nav className="links">

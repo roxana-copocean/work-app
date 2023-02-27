@@ -1,18 +1,20 @@
 .user-list {
-	width: 12em;
-	min-width: 12em;
+	width: 11em;
+	min-width: 11em;
 	padding: 30px;
-	background: var(--light-gray);
-	color: var(--accent-color);
+	background: var(--secondary-color);
+	color: var(--highlight-color);
+	font-size: 1rem;
 }
 
 .user-list h2 {
 	text-align: right;
-	font-weight: bold;
+	font-weight: 500;
+	color: var(--white);
 	margin-bottom: 40px;
-	padding-bottom: 10px;
 	font-size: 1rem;
 }
+
 .user-list .user-list-item {
 	display: flex;
 	justify-content: flex-end;
@@ -20,18 +22,21 @@
 	margin: 20px auto;
 }
 .user-list .avatar {
-	margin-left: 10px;
-	width: 40px;
-	height: 40px;
+	margin-left: .7em;
+	width: 2em;
+	height: 2em;
 }
 
 /* online users */
 .user-list .online-user {
 	display: inline-block;
-	margin-right: 10px;
-	width: 12px;
-	height: 12px;
-	background: #0ebb50;
+	margin-right: .4em;
+	width: .4em;
+	height: .4em;
+	background: #09e35d;
 	border-radius: 50%;
-	margin-top: 2px;
+}
+
+.online {
+	color: var(--accent-color);
 }
