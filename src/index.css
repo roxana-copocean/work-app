@@ -115,6 +115,32 @@ body {
 	color: #fff;
 }
 
+.btn_secondary {
+	background: transparent;
+	width: 100%;
+	border: 1px solid var(--input-color);
+	padding: .3em .7em;
+	border-radius: 1em;
+	color: var(--input-color);
+	font-weight: 500;
+	cursor: pointer;
+	font-size: .8rem;
+	transition: all .2s ease;
+}
+
+.btn_secondary:hover {
+	background-color: var(--light-gray);
+}
+
+.btn_primary {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--input-color);
+}
+
+.btn_primary:hover {
+	color: var(--accent-color);
+}
 /* Layout */
 
 .page-title {

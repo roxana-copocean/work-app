@@ -33,8 +33,7 @@
 }
 
 .navbar a {
-	color: var(--heading-color);
-	font-size: 1rem;
 	text-decoration: none;
 	margin-right: 1.5em;
+	color: var(--accent-color);
 }

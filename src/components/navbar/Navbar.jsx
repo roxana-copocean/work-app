@@ -21,16 +21,20 @@ export default function Navbar() {
 				{!user && (
 					<React.Fragment>
 						<li>
-							<Link to="/login">Login</Link>
+							<Link to="/login" className="btn_primary">
+								Login
+							</Link>
 						</li>
 						<li>
-							<Link to="/signup">Signup</Link>
+							<Link to="/signup" className="btn_primary">
+								Signup
+							</Link>
 						</li>
 					</React.Fragment>
 				)}
 				{user && (
 					<li>
-						<button className="btn" type="button" onClick={logout}>
+						<button className="btn_secondary" type="button" onClick={logout}>
 							Logout
 						</button>
 					</li>
