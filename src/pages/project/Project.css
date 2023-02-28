@@ -51,13 +51,18 @@
 	margin-bottom: 0px;
 }
 .project-comments textarea {
-	min-height: 40px;
-	font-size: 1.5em;
+	min-height: 2em;
+	font-size: 1em;
+}
+.project-comments span {
+	font-size: .9rem;
+	color: var(--accent-color);
 }
 
 /* comment list */
 .project-comments h4 {
-	color: var(--heading-color);
+	color: rgb(191, 191, 191);
+	font-size: .9rem;
 }
 .project-comments li {
 	padding: 16px;
