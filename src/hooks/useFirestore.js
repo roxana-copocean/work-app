@@ -82,11 +82,9 @@ export const useFirestore = (collectionName) => {
 	const updateDocument = async (id, newData) => {
 		dispatch({ type: 'IS_PENDING' });
 		try {
-			console.log('1');
 			const docRef = doc(projectFirestore, collectionName, id);
 
 			await updateDoc(docRef, newData);
-			console.log('2');
 
 			dispatchIfNotCancelled({ type: 'UPDATED_DOCUMENT', payload: newData });
 			return newData;

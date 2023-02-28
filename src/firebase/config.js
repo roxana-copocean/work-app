@@ -3,7 +3,7 @@ import { getFirestore, initializeFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 import { serverTimestamp } from 'firebase/firestore';
-import { Timestamp } from 'firebase/firestore';
+// import { timestamp } from 'firebase/firestore';
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyBPhU8eX7tYEaChkH6RmBT5E98i9oaVRA0',
@@ -23,7 +23,7 @@ const projectAuth = getAuth(app);
 const projectStorage = getStorage(app);
 
 // Firebase timestamp
-const timestamp = serverTimestamp();
+const timestamp = serverTimestamp(app);
 // const timestamp = Timestamp.now();
 
 export { projectFirestore, projectAuth, timestamp, projectStorage };

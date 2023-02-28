@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { timestamp } from '../../firebase/config';
 
-import { serverTimestamp } from 'firebase/firestore';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import Avatar from '../../components/avatar/Avatar';
@@ -17,15 +17,14 @@ export default function ProjectComments({ project }) {
 			displayName: user.displayName,
 			photoURL: user.photoURL,
 			content: comment,
-			createdAt: serverTimestamp(new Date()),
+			// createdAt: timestamp(new Date()),
 			id: Math.random()
 		};
 
 		const updatedComments = [ ...project.comments, newComment ];
-		console.log(updatedComments);
 
 		await updateDocument(project.id, { comments: updatedComments });
-		console.log('hei');
+
 		if (!response.error) {
 			setComment('');
 		}
