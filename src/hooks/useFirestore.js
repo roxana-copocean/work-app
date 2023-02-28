@@ -1,7 +1,7 @@
 // Use Firestore Hook
 
 import { useReducer, useEffect, useState } from 'react';
-import { collection, addDoc, doc, deleteDoc, setDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { projectFirestore, timestamp } from '../firebase/config';
 
 // the response state object
@@ -25,6 +25,8 @@ const firestoreReducer = (state, action) => {
 				error: action.payload,
 				success: false
 			};
+		case 'UPDATED_DOCUMENT':
+			return { isPending: false, document: action.payload, success: true, error: null };
 		case 'DELETED_DOC':
 			return {
 				document: null,
@@ -76,6 +78,18 @@ export const useFirestore = (collectionName) => {
 		}
 	};
 
+	// update document
+	const updateDocument = async (id, newData) => {
+		dispatch({ type: 'IS_PENDING' });
+		try {
+			const docRef = doc(projectFirestore, collectionName, id);
+			await updateDoc(docRef, newData);
+			dispatchIfNotCancelled({ type: 'UPDATED_DOCUMENT', payload: newData });
+		} catch (error) {
+			dispatchIfNotCancelled({ type: 'ERROR', payload: error.message });
+		}
+	};
+
 	useEffect(() => {
 		return () => setIsCancelled(true);
 	}, []);
@@ -83,6 +97,7 @@ export const useFirestore = (collectionName) => {
 	return {
 		addDocument,
 		deleteDocument,
-		response
+		response,
+		updateDocument
 	};
 };
