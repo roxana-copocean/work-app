@@ -82,13 +82,30 @@ export const useFirestore = (collectionName) => {
 	const updateDocument = async (id, newData) => {
 		dispatch({ type: 'IS_PENDING' });
 		try {
+			console.log('1');
 			const docRef = doc(projectFirestore, collectionName, id);
+
 			await updateDoc(docRef, newData);
+			console.log('2');
+
 			dispatchIfNotCancelled({ type: 'UPDATED_DOCUMENT', payload: newData });
+			return newData;
 		} catch (error) {
 			dispatchIfNotCancelled({ type: 'ERROR', payload: error.message });
 		}
 	};
+
+	// const updateDocument = async (id, newData) => {
+	// 	dispatch({ type: 'IS_PENDING' });
+	// 	try {
+	// 		const updatedDocument = await colRef.doc(id).update(newData);
+
+	// 		dispatchIfNotCancelled({ type: 'UPDATED_DOCUMENT', payload: updatedDocument });
+	// 		return updatedDocument;
+	// 	} catch (error) {
+	// 		dispatchIfNotCancelled({ type: 'ERROR', payload: error.message });
+	// 	}
+	// };
 
 	useEffect(() => {
 		return () => setIsCancelled(true);

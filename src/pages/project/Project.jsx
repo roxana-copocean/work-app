@@ -20,7 +20,7 @@ export default function Project() {
 		<div className="project-details">
 			{' '}
 			<ProjectSummary project={projectDocument} />
-			<ProjectComments />
+			<ProjectComments project={projectDocument} />
 		</div>
 	);
 }
