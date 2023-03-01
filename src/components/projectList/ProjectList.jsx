@@ -10,8 +10,9 @@ export default function ProjectList({ projects }) {
 			{projects.map((project) => (
 				<Link to={`/project/${project.id}`} key={project.id}>
 					<h4>{project.name}</h4>
-					{/* <p>Due by: {project.dueDate}</p> */}
+					<p className="due-date">Due by: {project.dueDate}</p>
 					<div className="assigned-to">
+						<p>Assigned to:</p>
 						<ul>
 							{project.assignedUsersList.map((user) => (
 								<li key={user.photoURL}>

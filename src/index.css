@@ -9,6 +9,7 @@
 	--highlight-color: #1e364d;
 	--error: #f57c00;
 	--accent-color: #669df6;
+	--accent2: #f6820d;
 	--gray: #cdd2d6;
 	--bg-color: #eceff1;
 	--white: #fff;
@@ -123,12 +124,13 @@ body {
 }
 
 .btn_secondary {
-	background: transparent;
-	width: 100%;
-	border: 1px solid var(--input-color);
+	background: var(--accent-color);
+	padding: .3em .6em;
+	border: none;
+	/* border: 1px solid var(--accent-color); */
 	padding: .3em .7em;
 	border-radius: 1em;
-	color: var(--input-color);
+	color: var(--white);
 	font-weight: 500;
 	cursor: pointer;
 	font-size: .8rem;
@@ -136,7 +138,7 @@ body {
 }
 
 .btn_secondary:hover {
-	background-color: var(--light-gray);
+	color: var(--bg-color);
 }
 
 .btn_primary {
@@ -161,7 +163,8 @@ body {
 .page-title {
 	display: inline-block;
 	font-size: 1rem;
-	color: var(--heading-color);
+	color: var(--accent2);
+	font-weight: 600;
 }
 
 /* Forms */

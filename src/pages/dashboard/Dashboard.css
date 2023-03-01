@@ -1,0 +1,38 @@
+.project-filter {
+	margin: 30px auto;
+}
+
+.project-filter nav {
+	display: flex;
+	padding: .6em 0 .6em 1em;
+	background-color: var(--white);
+	border-radius: 16px;
+	align-items: center;
+}
+.project-filter p {
+	font-size: var(--secondary);
+	margin-right: 10px;
+}
+.btn_filter {
+	border: none;
+	padding: .2em .6em;
+	font-size: var(--small);
+	color: var(--primary-color);
+	background-color: transparent;
+	border-right: 1px solid var(--gray);
+	padding-right: 1em;
+	cursor: pointer;
+	margin-right: 1em;
+	font-size: var(--secondary);
+}
+
+.btn_filter:hover {
+	opacity: .7;
+}
+.active {
+	color: var(--accent-color);
+}
+
+.btn_filter:last-child {
+	border: none;
+}

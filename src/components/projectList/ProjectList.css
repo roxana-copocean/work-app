@@ -1,33 +1,45 @@
 .project-list {
 	margin-top: 40px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	grid-gap: 1em;
 }
 .project-list a {
-	background-color: var(--white);
-	padding: 16px;
-	border-radius: 6px;
-	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
 	text-decoration: none;
 	color: inherit;
+	background: var(--white);
+	border-radius: 16px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.08);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 1em;
 }
 .project-list h4 {
 	font-size: var(--primary);
-	color: var(--heading-color);
+	color: var(--accent-color);
 }
 .project-list p {
 	color: var(--text-color);
 	font-size: var(--primary);
 }
 .project-list .assigned-to {
-	margin-top: 20px;
-	padding-top: 10px;
-	border-top: 1px solid var(--heading-color);
+	margin-top: 1em;
 }
+
+.project-list .due-date {
+	color: rgb(191, 191, 191);
+	font-size: var(--small);
+}
+
+.project-list .assigned-to p {
+	font-size: var(--small);
+	margin-bottom: .5em;
+}
+
 .project-list ul {
-	margin: 10px 0;
 	display: flex;
+	margin-bottom: 0;
 }
 .project-list li {
 	margin-right: 10px;
