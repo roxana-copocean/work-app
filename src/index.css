@@ -138,7 +138,7 @@ body {
 }
 
 .btn_secondary:hover {
-	color: var(--bg-color);
+	transform: scale(1.02);
 }
 
 .btn_primary {

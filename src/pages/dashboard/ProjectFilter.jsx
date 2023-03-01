@@ -1,13 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+const filterList = [ 'all', 'mine', 'development', 'design', 'frontend', 'backend' ];
 
-const filterList = [ 'all', 'mine', 'development', 'design', 'marketing', 'sales' ];
-
-export default function ProjectFilter() {
-	const [ newfilter, setNewFilter ] = useState('all');
+export default function ProjectFilter({ newFilter, changeFilter }) {
 	const handleClick = (selectFilter) => {
-		setNewFilter(selectFilter);
-		console.log(selectFilter);
+		changeFilter(selectFilter);
 	};
 
 	return (
@@ -17,7 +12,7 @@ export default function ProjectFilter() {
 				{filterList.map((filter, idx) => (
 					<button
 						key={idx}
-						className={newfilter === filter ? 'active btn_filter' : 'btn_filter'}
+						className={newFilter === filter ? 'active btn_filter' : 'btn_filter'}
 						onClick={() => handleClick(filter)}
 					>
 						{filter}
