@@ -3,13 +3,13 @@
 /* custom properies */
 
 :root {
-	--heading-color: #003760;
-	--primary-color: #051e34;
-	--secondary-color: #0f263d;
-	--highlight-color: #1e364d;
-	--error: #f57c00;
-	--accent-color: #669df6;
-	--accent2: #f6820d;
+	--heading-color: #252422;
+	--secondary-color: #4f4b46;
+	--primary-color: #403d39;
+	--highlight-color: #eb5e28;
+	--error: #eb5e28;
+	--accent-color: #eb5e28;
+	--accent2: #ccc5b9;
 	--gray: #cdd2d6;
 	--bg-color: #eceff1;
 	--white: #fff;
