@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { projectAuth, projectFirestore } from '../firebase/config';
 import { useAuthContext } from './useAuthContext';
-import { doc, setDoc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc } from 'firebase/firestore';
 
 export const useLogout = () => {
 	const [ isCancelled, setIsCancelled ] = useState(false);

@@ -21,13 +21,13 @@ export default function Sidebar() {
 					<ul>
 						<li>
 							<NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-								<img src={dashboard} alt="dashboard" />
+								{/* <img src={dashboard} alt="dashboard" /> */}
 								<span>Dashboard</span>
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/create" className={({ isActive }) => (isActive ? 'active' : '')}>
-								<img src={add} alt="add" />
+								{/* <img src={add} alt="add" /> */}
 								<span>New Project</span>
 							</NavLink>
 						</li>

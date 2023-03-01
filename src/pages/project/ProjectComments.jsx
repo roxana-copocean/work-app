@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import { Timestamp } from 'firebase/firestore';
+import { serverTimestamp, Timestamp } from 'firebase/firestore';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+
 import Avatar from '../../components/avatar/Avatar';
+import { timestamp } from '../../firebase/config';
 
 export default function ProjectComments({ project }) {
 	const { updateDocument, response } = useFirestore('projects');
@@ -16,7 +19,7 @@ export default function ProjectComments({ project }) {
 			displayName: user.displayName,
 			photoURL: user.photoURL,
 			content: comment,
-			createdAt: Timestamp.fromDate(new Date()),
+			createdAt: serverTimestamp(),
 			id: Math.random()
 		};
 
@@ -28,6 +31,7 @@ export default function ProjectComments({ project }) {
 			setComment('');
 		}
 	};
+
 	return (
 		<div className="project-comments">
 			<h4>Project Comments</h4>
@@ -39,9 +43,15 @@ export default function ProjectComments({ project }) {
 								<Avatar src={comment.photoURL} />
 								<p>{comment.displayName}</p>
 							</div>
-							<div className="comment-date">
-								<p>date here</p>
-							</div>
+							{comment.createdAt && (
+								<div className="comment-date">
+									<p>
+										{formatDistanceToNow(new Date(comment.createdAt.seconds * 1000), {
+											addSuffix: true
+										})}
+									</p>
+								</div>
+							)}
 							<div className="comment-content">
 								<p>{comment.content}</p>
 							</div>
