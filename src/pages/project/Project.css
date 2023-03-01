@@ -13,13 +13,12 @@
 	border-left: 4px solid var(--accent-color);
 }
 .project-summary .due-date {
-	margin-top: .1em;
-	font-size: 0.7em;
-	color: var(--heading-color);
+	color: rgb(191, 191, 191);
+	font-size: var(--small);
 }
 
 .project-summary h2 {
-	font-size: 1.1rem;
+	font-size: var(--heading);
 	color: var(--accent-color);
 	font-weight: 500;
 }
@@ -27,20 +26,21 @@
 	margin: 30px 0;
 	color: var(--text-color);
 	line-height: 1.8em;
-	font-size: 0.9em;
+	font-size: var(--primary);
 }
 .project-summary h4 {
 	color: var(--text-color);
-	font-size: 0.9em;
-	font-weight: 500;
+	font-size: var(--small);
 }
 .project-summary .assigned-users {
 	display: flex;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .project-summary .assigned-users .avatar {
 	margin-right: 10px;
 	border: 2px solid var(--accent-color);
+	width: 2em;
+	height: 2em;
 }
 .project-summary + .btn {
 	margin-top: 20px;
@@ -55,41 +55,51 @@
 	font-size: 1em;
 }
 .project-comments span {
-	font-size: .9rem;
+	font-size: var(--primary);
 	color: var(--accent-color);
 }
 
 /* comment list */
 .project-comments h4 {
 	color: rgb(191, 191, 191);
-	font-size: .9rem;
+	font-size: var(--primary);
 }
 .project-comments li {
-	padding: 16px;
+	padding: .8em;
 	border-radius: 4px;
 	border: 1px solid #f2f2f2;
-	margin-top: 20px;
+	margin-top: 1.5em;
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
 	background: #fff;
 }
 .comment-author {
 	display: flex;
 	align-items: center;
-	color: var(--title-color);
+	justify-content: flex-start;
+	font-size: var(--primary);
+	color: var(--accent-color);
 }
 .comment-author .avatar {
-	width: 30px;
-	height: 30px;
-	margin-right: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: .3em;
 }
 .comment-date {
-	color: var(--text-color);
-	font-size: 0.9em;
+	color: rgb(191, 191, 191);
+
+	font-size: var(--small);
 	margin: 4px 0 10px;
 }
+
+.createdBy {
+	color: var(--text-color);
+	font-size: var(--small);
+	margin: 4px 0 2px;
+}
+
 .comment-content {
 	color: var(--text-color);
-	font-size: 0.9em;
+	font-size: var(--primary);
 }
 
 /* comments scrollbar */

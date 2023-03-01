@@ -14,6 +14,14 @@
 	--white: #fff;
 	--input-color: #717171;
 	--light-gray: #ddd;
+
+	/* font sizes */
+	--logo: 1.2rem;
+	--important: 1.5rem;
+	--heading: 1.1rem;
+	--primary: .9rem;
+	--secondary: .8rem;
+	--small: .7rem;
 }
 /* ******************************************************************** */
 
@@ -133,13 +141,21 @@ body {
 }
 
 .btn_primary {
-	font-size: 1rem;
-	font-weight: 500;
-	color: var(--input-color);
+	background: transparent;
+	border: none;
+	padding: 0em;
+	border-bottom: 1px solid var(--accent-color);
+	color: var(--accent-color);
+	/* font-weight: 500; */
+	cursor: pointer;
+	font-size: .8rem;
+	transition: all .2s ease;
+	margin-top: 2em;
 }
 
 .btn_primary:hover {
-	color: var(--accent-color);
+	color: var(--input-color);
+	border-bottom: 1px solid var(--input-color);
 }
 /* Layout */
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { timestamp } from '../../firebase/config';
-
+import { Timestamp } from 'firebase/firestore';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import Avatar from '../../components/avatar/Avatar';
@@ -17,7 +16,7 @@ export default function ProjectComments({ project }) {
 			displayName: user.displayName,
 			photoURL: user.photoURL,
 			content: comment,
-			// createdAt: timestamp(new Date()),
+			createdAt: Timestamp.fromDate(new Date()),
 			id: Math.random()
 		};
 

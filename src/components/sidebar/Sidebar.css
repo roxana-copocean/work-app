@@ -13,7 +13,7 @@
 }
 
 .sidebar .user {
-	font-size: .9rem;
+	font-size: var(--primary);
 	font-weight: 500;
 	color: var(--gray);
 	text-align: center;
@@ -32,7 +32,8 @@
 
 .sidebar .links a {
 	display: flex;
-	font-size: .9rem;
+	font-size: var(--primary);
+
 	font-weight: 500;
 	text-decoration: none;
 	width: 100%;

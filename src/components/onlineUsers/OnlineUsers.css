@@ -4,12 +4,12 @@
 	padding: 30px;
 	background: var(--input-color);
 	color: var(--gray);
-	font-size: .9rem;
+	font-size: var(--primary);
 }
 
 .user-list h2 {
 	text-align: right;
-	font-size: .8rem;
+	font-size: var(--secondary);
 	font-weight: 500;
 	color: var(--white);
 	margin-bottom: 40px;
@@ -39,5 +39,5 @@
 
 .online {
 	color: var(--white);
-	font-size: .8rem;
+	font-size: var(--secondary);
 }

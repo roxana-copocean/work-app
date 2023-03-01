@@ -13,12 +13,12 @@
 	color: inherit;
 }
 .project-list h4 {
-	font-size: 0.9em;
+	font-size: var(--primary);
 	color: var(--heading-color);
 }
 .project-list p {
 	color: var(--text-color);
-	font-size: 0.9em;
+	font-size: var(--primary);
 }
 .project-list .assigned-to {
 	margin-top: 20px;
