@@ -1,4 +1,5 @@
 .sidebar {
+	position: relative;
 	width: 13em;
 	min-width: 13em;
 	background-color: var(--primary-color);
@@ -61,4 +62,13 @@
 
 .sidebar .links .active img {
 	color: var(--accent-color);
+}
+
+.logo_img {
+	position: absolute;
+	bottom: 2em;
+	right: calc(50% - 3em);
+	transform: translateY(calc(5));
+	width: 3em;
+	height: 3em;
 }

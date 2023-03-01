@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import dashboard from '../../assets/dashboard-tile-setting-svgrepo-com.svg';
-
-import add from '../../assets/add-svgrepo-com.svg';
+import logo from '../../assets/logo2.svg';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import './Sidebar.css';
 import Avatar from '../avatar/Avatar';
@@ -34,6 +32,7 @@ export default function Sidebar() {
 					</ul>
 				</nav>
 			</div>
+			<img src={logo} alt="logo" className="logo_img" />
 		</div>
 	);
 }
