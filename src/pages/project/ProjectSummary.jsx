@@ -14,8 +14,10 @@ export default function ProjectSummary({ project }) {
 		<div>
 			<div className="project-summary">
 				<h2>{project.name}</h2>
-				<p className="createdBy">created by {project.createdBy.displayName}</p>
-				<p className="due-date">Project due by {project.dueDate}</p>
+				<div className="project_details">
+					<p className="createdBy">created by {project.createdBy.displayName}</p>
+					<p className="due-date">Project due by {project.dueDate}</p>
+				</div>
 				<p className="details">{project.details}</p>
 				<h4>Project is assigned to :</h4>
 				<div className="assigned-users">

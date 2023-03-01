@@ -21,12 +21,12 @@ export default function Navbar() {
 				{!user && (
 					<React.Fragment>
 						<li>
-							<Link to="/login" className="btn_primary">
+							<Link to="/login" className="btn_nav">
 								Login
 							</Link>
 						</li>
 						<li>
-							<Link to="/signup" className="btn_primary">
+							<Link to="/signup" className="btn_nav">
 								Signup
 							</Link>
 						</li>

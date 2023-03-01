@@ -112,15 +112,14 @@ body {
 	padding: .3em .7em;
 	border-radius: 1em;
 	color: var(--white);
-	font-weight: 400;
+	font-weight: 500;
 	cursor: pointer;
-	font-size: .8rem;
+	font-size: var(--secondary);
 	transition: all .2s ease;
 }
 
 .btn:hover {
-	background: var(--highlight-color);
-	color: #fff;
+	color: var(--accent-color);
 }
 
 .btn_secondary {

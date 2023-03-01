@@ -37,3 +37,13 @@
 	margin-right: 1.5em;
 	color: var(--accent-color);
 }
+
+.navbar .btn_nav {
+	color: var(--secondary-color);
+	font-weight: 400;
+	transition: all .1s ease;
+}
+
+.navbar .btn_nav:hover {
+	color: var(--accent-color);
+}
