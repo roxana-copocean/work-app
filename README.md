@@ -1,4 +1,4 @@
-# **geekMonk** 
+<h1 style="color:#eb5e28">geekMonk</h1>
 My React App is a web application that allows users to manage projects, collaborate with coworkers, and stay organized.
 
 ### **Table of Contents**
@@ -62,4 +62,26 @@ The app features a commenting system that allows users to leave comments on proj
 
 ### **Project Filtering**
 My React App allows users to filter projects by all, by mine, and by category using React Select
+
+**_Dashboard_**
+
+![Dashboard](./src/github/github/dashboard.jpg)
+
+**_New Project_**
+
+![Project](./src/github/github/project_page.jpg)
+
+
+**_Create Project_**
+
+![Create Project](./src/github/github/create_project.jpg)
+
+**_Login_**
+
+![Login](./src/github/github/login.jpg)
+**_Signup_**
+
+![Create Project](./src/github/github/sign_up.jpg)
+
+
 
