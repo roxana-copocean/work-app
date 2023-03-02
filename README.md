@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# **geekMonk** 
+My React App is a web application that allows users to manage projects, collaborate with coworkers, and stay organized.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### **Table of Contents**
+- Technologies
+- Getting Started
+- Features
+- Custom Hooks
+- Protected Routes
+- Online Users
+- Project Management
+- Comments
+- Filtering
+### **Technologies**
+The App is built using the following technologies:
+- React
+- Firebase
+- React Router
+- React Select
+- date-fns
 
-## Available Scripts
+### **Getting Started**
+To get started, simply clone the repository and run ```npm install``` to install the necessary dependencies. You will also need to add your Firebase configuration details to the ```src/firebase/firebase.js``` file.
 
-In the project directory, you can run:
+Once you have installed the dependencies and added your Firebase configuration, you can start the development server by running ```npm start```.
 
-### `npm start`
+### **Features**
+The app has the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User authentication (login and signup)
+- Online user list
+- Project creation
+- Project assignment
+- Due date selection
+- Project category selection
+- Mark project as completed (by project creator)
+- Commenting system
+- Project filtering (by all, by mine, by category)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Custom Hooks**
+I make use of the following custom hooks:
 
-### `npm test`
+- useAuthContext
+- useCollection
+- useDocument
+- useFirestore
+- useLogin
+- useSignup
+- useLogout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Protected Routes**
+**geekMonk** uses protected routes to ensure that only authenticated users can access certain pages. The login and signup pages are accessible to all users, but all other pages require authentication.
 
-### `npm run build`
+### **Online Users**
+The app displays a list of online users in real-time, using Firebase's Realtime Database.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Project Management**
+The app allows users to create new projects, assign them to coworkers, and set a due date. Projects can also be marked as completed by the project creator.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Comments**
+The app features a commenting system that allows users to leave comments on projects. The time at which each comment was added is displayed using date-fns **```formatDistanceToNow```** function.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Project Filtering**
+My React App allows users to filter projects by all, by mine, and by category using React Select
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
